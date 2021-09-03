@@ -7,10 +7,13 @@ using UnityEngine;
 
 public class item : MonoBehaviour
 {
+    public GameObject boom;
+    Renderer rend;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
     }
 
     // Update is called once per frame
@@ -21,6 +24,10 @@ public class item : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        Instantiate(boom, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        rend.enabled = false;
+        Destroy(this.gameObject , audio.clip.length);
     }
 }
