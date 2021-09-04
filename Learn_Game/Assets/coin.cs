@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class coin : MonoBehaviour
 {
-  void OnTriggerEnter(Collider other)
+    public GameObject boom;
+    Renderer rend;
+
+    void Start()
     {
-        Destroy(this.gameObject);
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Instantiate(boom, this.gameObject.transform.position, this.gameObject.transform.rotation);
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
+        rend.enabled = false;
+        Destroy(this.gameObject, audio.clip.length);
     }
 }
