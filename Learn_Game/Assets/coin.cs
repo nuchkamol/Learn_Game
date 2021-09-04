@@ -13,6 +13,11 @@ public class coin : MonoBehaviour
         rend.enabled = true;
     }
 
+    void Update()
+    {
+        transform.Rotate(new Vector3(0f, 45f * Time.deltaTime, 0f));
+    }
+
     void OnTriggerEnter(Collider other)
     {
         Instantiate(boom, this.gameObject.transform.position, this.gameObject.transform.rotation);
