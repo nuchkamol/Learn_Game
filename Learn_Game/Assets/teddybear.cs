@@ -1,12 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class item : MonoBehaviour
+public class teddybear : MonoBehaviour
 {
     public GameObject boom;
     Renderer rend;
@@ -24,7 +20,7 @@ public class item : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        gameManager.nScore += 2;
+        gameManager.nScore +=3;
         Text txt;
         txt = GameObject.Find("/Canvas/txtScore").GetComponent<Text>();
         txt.text = "Score : " + gameManager.nScore;

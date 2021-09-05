@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class coin : MonoBehaviour
 {
     public GameObject boom;
@@ -20,6 +21,11 @@ public class coin : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        gameManager.nScore++;
+        Text txt;
+        txt = GameObject.Find("/Canvas/txtScore").GetComponent<Text>();
+        txt.text = "Score : " + gameManager.nScore;
+
         Instantiate(boom, this.gameObject.transform.position, this.gameObject.transform.rotation);
         AudioSource audio = GetComponent<AudioSource>();
         audio.Play();
