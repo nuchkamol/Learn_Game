@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 75e05bf3952617845be6f42c0d3ea743
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - FC Rainbow [Non-commercial use]
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 43942c283abdde74b86576e6bc00baf8, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
