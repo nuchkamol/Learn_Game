@@ -13,7 +13,9 @@ public class object_spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0f, 30f * Time.deltaTime, 0f));
+       
+     //   transform.Rotate(new Vector3(0f, 45f * Mathf.Sin(Time.time * 2f), 0f));
+        transform.rotation = Quaternion.Euler(20f * Mathf.Sin(Time.time * 2f), 0f , 4.383f);
     }
 
 }
